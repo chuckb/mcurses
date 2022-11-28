@@ -17,8 +17,8 @@ Please take a look into the examples to see how it is to be done exactly.
   
 ## What do you need to use this Library?
 
-You need to install a **terminal programm** on your computer to visualize the characters sent and received by the serial line of your computer.
-The Arduino IDE has a build in serial terminal but for this libray the terminal has to emulate the VT220 standard.
+You need to install a **terminal program** on your computer to visualize the characters sent and received by the serial line of your computer.
+The Arduino IDE has a build in serial terminal but for this library the terminal has to emulate the VT220 standard.
 The Arduino terminal does not to this and therefore you need a separate terminal program.
 
 ## On Windows you can uses for example
@@ -52,7 +52,7 @@ Hint: minicom can not display all graphics correctly because it supports only VT
 Here is the "hexeditor_demo". 
 
 <p align="center">
-  <img src="/doc/hexedit.png" width="640"/>
+  <img src="./doc/hexedit.png" width="640"/>
 </p>
 
 In this picture it is running on an ARDUINO UNO but you can easily include it on any microcontroller as follows:
@@ -72,6 +72,6 @@ For detailed information see the "hexeditor_demo" or "hexeditor_eeprom" Arduino 
 The "temperature_demo" displays  bar graphs of a simulated disk storage.
 
 <p align="center">
-  <img src="screenshot.png" width="640"/>
+  <img src="./doc/tempdemo.png" width="640"/>
 </p>
 
