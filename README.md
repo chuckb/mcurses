@@ -26,7 +26,7 @@ The Arduino terminal does not to this and therefore you need a separate terminal
 - PuTTY
 - teraterm
 
-There may be several others but his two I have tested.
+There may be several others but these two I have tested.
 
 ## On Linux you can use for example 
 
@@ -44,8 +44,30 @@ The parameters have the following meaning
 
 Hint: minicom can not display all graphics correctly because it supports only VT102 or ANSI and not VT220. Therefore it seems to have some problems with the colors. To solve this, change the terminal type manually  to ‘ansi’. Also it seems to have some issues with the graphical symbols for lines and corners.
 
+## On Mac you can use for example 
+
+- Qodem (available via Homebrew using `brew install qodem`)
+- picocom (again via Homebrew using `brew install picocom`)
+
+Before running qodem, go to Terminal >> Preferences >> Keyboard and set "Use Option as Meta Key". You can then bring up menus and execute program commands via the Mac Option key.
+
+Create a phonebook entry by pressing 'I'. It should look like this:
+
+<p align="center">
+  <img src="./doc/qodem.png" width="640"/>
+</p>
+
+picocom should be called (2nd parameter) with the name of the serial device that your Arduino is connected to. Use `ls /dev/tty.*` to investigate.
+
+Set type to CMDLINE. Set terminal emulation to VT220. Set Codepage to DEC.
+
+VT220 emulation seems to work well. All of the demos looked fine. All other open source alternatives tried (except Putty for Mac...not tried) did not have VT220 emulation. SyncTERM, Zterm and screen were tried. 
+
+Hint: Once you are done with Qodem, use Option-X to quit. Option-Z will bring up a menu with other commands of interest.
 
 ## Examples
+
+When you load up an example, be aware that the default Serial port is used. If you intend to run the example against another serial port (for those Arduino that have another), search and replace Serial with Serialx with x=port number.
 
 
 ### Hex Editor EEPROM Demo
@@ -69,7 +91,7 @@ For detailed information see the "hexeditor_demo" or "hexeditor_eeprom" Arduino 
 
 
 ### Temperature Demo
-The "temperature_demo" displays  bar graphs of a simulated disk storage.
+The "temperature_demo" displays bar graphs of a simulated disk storage in simulated real-time.
 
 <p align="center">
   <img src="./doc/tempdemo.png" width="640"/>

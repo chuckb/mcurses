@@ -6,6 +6,7 @@
  * Revision History:
  * V1.0 2015 xx xx Frank Meyer, original version
  * V1.1 2017 01 13 ChrisMicro, addepted as Arduino library, MCU specific functions removed
+ * V1.2 2022 11 28 chuckb, merged bug fixes
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
